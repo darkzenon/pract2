@@ -238,4 +238,5 @@ html_content += '''
 with open("result_2.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("\n✅ Отчёт сохранён в файл: result_2.html")
+
+print("Отчёт сохранён в файл: result_2.html")
