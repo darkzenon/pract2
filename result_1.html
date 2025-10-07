@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет по практике</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        .highlight {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            font-weight: bold;
+        }
+        #map {
+            height: 500px;
+            border-radius: 8px;
+            margin-top: 20px;
+            position: relative !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Отчет за 1 неделю ознакомительной практики по разработке программного обеспечения геосервиса</h1>
+    <h2>Выполнил: Горынин Денис Дмитриевич, группа: 2024-ФГиИБ-ИСиТ-2см</h2>
+
+    <div class="section">
+        <h2>1. Ближайшая школа рандомному дому</h2>
+        <p><strong>Координаты дома:</strong> 56.417000, 29.423000</p>
+        <div class="highlight">
+            <strong>Название:</strong> Муниципальное образовательное учреждение "Пустошкинская средняя общеобразовательная школа"<br>
+            <strong>Адрес:</strong> 182300, Псковская область, г. Пустошка, ул. Революции, 59<br>
+            <strong>Тип учреждения:</strong> (Муниципальное образовательное учреждение)<br>
+            <strong>Широта:</strong> 56.33204<br>
+            <strong>Долгота:</strong> 29.36312<br>
+            <strong>Расстояние до дома:</strong> 10.158 км
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Все школы в радиусе 30 км от дома</h2>
+        <p>Найдено 11 школ(ы):</p>
+        
+        <table>
+            <tr>
+                <th>Название школы</th>
+                <th>Адрес</th>
+                <th>Расстояние (км)</th>
+            </tr>
+
+            <tr>
+                <td>Муниципальное общеобразовательное учреждение "Гультяевская средняя общеобразовательная школа"</td>
+                <td>182327, Псковская область, Пустошкинский район, д. Гультяи</td>
+                <td>20.039</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Сергейцевская средняя общеобразовательная школа"</td>
+                <td>182315, Псковская область, Пустошкинский район, д. Сергейцево</td>
+                <td>20.185</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное общеобразовательное учреждение "Алольская средняя общеобразовательная школа"</td>
+                <td>182303, Псковская область, Пустошкинский район, п/о Алоль</td>
+                <td>19.654</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Пустошкинская средняя общеобразовательная школа"</td>
+                <td>182300, Псковская область, г. Пустошка, ул. Революции, 59</td>
+                <td>10.158</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Вязовская средняя общеобразовательная школа"</td>
+                <td>182217, Псковская область, Новосокольнический район, п/о Вяз, д.Вяз.</td>
+                <td>26.168</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Забельская средняя общеобразовательная школа"</td>
+                <td>182321, Псковская область, Пустошкинский район, д. Забелье</td>
+                <td>14.387</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Малаховская основная общеобразовательная школа"</td>
+                <td>182230, Псковская область, Себежский район, д. Исаково</td>
+                <td>24.831</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Островская основная общеобразовательная школа"</td>
+                <td>182216, Псковская область, Новосокольнический район, п/о Островки, д.Островки.</td>
+                <td>26.282</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Говоровская основная общеобразовательная школа"</td>
+                <td>182222, Псковская область, Новосокольнический район, п/о Руново, д. Руново</td>
+                <td>24.606</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Маевская средняя общеобразовательная школа"</td>
+                <td>Псковская область, Новосокольнический район, п/о Маево, д. Маево</td>
+                <td>24.588</td>
+            </tr>
+    
+            <tr>
+                <td>Муниципальное образовательное учреждение "Красненская средняя общеобразовательная школа"</td>
+                <td>182314, Псковская область, Пустошкинский район, п/о Щукино, д. Красное</td>
+                <td>20.668</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>3. Количество школ типа "Государственное образовательное учреждение"</h2>
+        <p class="highlight">Всего: {4872} школ(а)</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Интерактивная карта</h2>
+        <p>На карте показаны:</p>
+        <ul>
+            <li>Ваш дом (красный маркер)</li>
+            <li>Ближайшая школа (зелёный маркер)</li>
+            <li>Все школы в радиусе 3 км (синие маркеры)</li>
+        </ul>
+        <div id="map"><!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_37ef7b03c0592e80b2ec9933ab8ab71b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_37ef7b03c0592e80b2ec9933ab8ab71b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_37ef7b03c0592e80b2ec9933ab8ab71b = L.map(
+                "map_37ef7b03c0592e80b2ec9933ab8ab71b",
+                {
+                    center: [56.417, 29.423],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_52cca9363afd248cb1657b82581847c6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_52cca9363afd248cb1657b82581847c6.addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+            var marker_118aafbb35faa02e738eec25a48a9b7d = L.marker(
+                [56.417, 29.423],
+                {
+}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+            var icon_74cee3861eb0a0d8caddbc5ba5435de9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b1c4c4993b3cb1c4cbf6992b5092895 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3758d706669a63737efe9c36bdbec94d = $(`<div id="html_3758d706669a63737efe9c36bdbec94d" style="width: 100.0%; height: 100.0%;">Ваш дом<br>56.417000, 29.423000</div>`)[0];
+                popup_3b1c4c4993b3cb1c4cbf6992b5092895.setContent(html_3758d706669a63737efe9c36bdbec94d);
+            
+        
+
+        marker_118aafbb35faa02e738eec25a48a9b7d.bindPopup(popup_3b1c4c4993b3cb1c4cbf6992b5092895)
+        ;
+
+        
+    
+    
+                marker_118aafbb35faa02e738eec25a48a9b7d.setIcon(icon_74cee3861eb0a0d8caddbc5ba5435de9);
+            
+    
+            var marker_efcd7641f8d6338a4a6f72c849bd8daf = L.marker(
+                [56.33204, 29.36312],
+                {
+}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+            var icon_f7829a6bc06de559f4c26d98598d70aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "school",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_501ee04e7585f9af83bb56d1f34714c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46e2e70b4ac6167b2407aac8327dca93 = $(`<div id="html_46e2e70b4ac6167b2407aac8327dca93" style="width: 100.0%; height: 100.0%;">Ближайшая школа:<br>Муниципальное образовательное учреждение "Пустошки...</div>`)[0];
+                popup_501ee04e7585f9af83bb56d1f34714c1.setContent(html_46e2e70b4ac6167b2407aac8327dca93);
+            
+        
+
+        marker_efcd7641f8d6338a4a6f72c849bd8daf.bindPopup(popup_501ee04e7585f9af83bb56d1f34714c1)
+        ;
+
+        
+    
+    
+            marker_efcd7641f8d6338a4a6f72c849bd8daf.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Пустошкинская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_efcd7641f8d6338a4a6f72c849bd8daf.setIcon(icon_f7829a6bc06de559f4c26d98598d70aa);
+            
+    
+            var circle_marker_24bb7f1be298aa3c5441c802fceacbb7 = L.circleMarker(
+                [56.23794, 29.45545],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_a9b9fd2d3ddd6220194d4e86c34592b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd601069bb5d0c77a4b718cce54c2bcc = $(`<div id="html_cd601069bb5d0c77a4b718cce54c2bcc" style="width: 100.0%; height: 100.0%;">Муниципальное общеобразовательное учреждение "Гультяевская средняя общеобразовательная школа"</div>`)[0];
+                popup_a9b9fd2d3ddd6220194d4e86c34592b4.setContent(html_cd601069bb5d0c77a4b718cce54c2bcc);
+            
+        
+
+        circle_marker_24bb7f1be298aa3c5441c802fceacbb7.bindPopup(popup_a9b9fd2d3ddd6220194d4e86c34592b4)
+        ;
+
+        
+    
+    
+            circle_marker_24bb7f1be298aa3c5441c802fceacbb7.bindTooltip(
+                `<div>
+                     Муниципальное общеобразовательное учреждение "Гультяевская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05c489d821c635735b42169b0c8a58aa = L.circleMarker(
+                [56.25143, 29.2901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_82e399ec9ec6447d2868292305f01be1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a902deb7de1cc0346c639f3c0c9c061 = $(`<div id="html_8a902deb7de1cc0346c639f3c0c9c061" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Сергейцевская средняя общеобразовательная школа"</div>`)[0];
+                popup_82e399ec9ec6447d2868292305f01be1.setContent(html_8a902deb7de1cc0346c639f3c0c9c061);
+            
+        
+
+        circle_marker_05c489d821c635735b42169b0c8a58aa.bindPopup(popup_82e399ec9ec6447d2868292305f01be1)
+        ;
+
+        
+    
+    
+            circle_marker_05c489d821c635735b42169b0c8a58aa.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Сергейцевская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f08da37660d639285333af7aa8f0635 = L.circleMarker(
+                [56.45762, 29.11294],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_1a7578763bd910b0d004b4d28bf44e06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94d35ca8b0c5064927e6479f3dc24a9e = $(`<div id="html_94d35ca8b0c5064927e6479f3dc24a9e" style="width: 100.0%; height: 100.0%;">Муниципальное общеобразовательное учреждение "Алольская средняя общеобразовательная школа"</div>`)[0];
+                popup_1a7578763bd910b0d004b4d28bf44e06.setContent(html_94d35ca8b0c5064927e6479f3dc24a9e);
+            
+        
+
+        circle_marker_1f08da37660d639285333af7aa8f0635.bindPopup(popup_1a7578763bd910b0d004b4d28bf44e06)
+        ;
+
+        
+    
+    
+            circle_marker_1f08da37660d639285333af7aa8f0635.bindTooltip(
+                `<div>
+                     Муниципальное общеобразовательное учреждение "Алольская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0f6e3e99f1e1d6863689c76d4cd5891 = L.circleMarker(
+                [56.33204, 29.36312],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_61c063a3d4c568868fccefa754ba9017 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75d5dba5bffa5f2fb3aff6644be3cb54 = $(`<div id="html_75d5dba5bffa5f2fb3aff6644be3cb54" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Пустошкинская средняя общеобразовательная школа"</div>`)[0];
+                popup_61c063a3d4c568868fccefa754ba9017.setContent(html_75d5dba5bffa5f2fb3aff6644be3cb54);
+            
+        
+
+        circle_marker_d0f6e3e99f1e1d6863689c76d4cd5891.bindPopup(popup_61c063a3d4c568868fccefa754ba9017)
+        ;
+
+        
+    
+    
+            circle_marker_d0f6e3e99f1e1d6863689c76d4cd5891.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Пустошкинская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07c7cb183ba67800b6be24ccef19d131 = L.circleMarker(
+                [56.61107, 29.66272],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_c34e0363040ed1243dc32277849589f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_840cf453e854ca3d0bdcd44971be40af = $(`<div id="html_840cf453e854ca3d0bdcd44971be40af" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Вязовская средняя общеобразовательная школа"</div>`)[0];
+                popup_c34e0363040ed1243dc32277849589f7.setContent(html_840cf453e854ca3d0bdcd44971be40af);
+            
+        
+
+        circle_marker_07c7cb183ba67800b6be24ccef19d131.bindPopup(popup_c34e0363040ed1243dc32277849589f7)
+        ;
+
+        
+    
+    
+            circle_marker_07c7cb183ba67800b6be24ccef19d131.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Вязовская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15052f78c5d092d0e67e0591b020aec7 = L.circleMarker(
+                [56.35209, 29.62438],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_38e0b2ff6dce7a504be8d581c7aab68f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b91e7daf64d031d13e792faf0aa1fc5 = $(`<div id="html_7b91e7daf64d031d13e792faf0aa1fc5" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Забельская средняя общеобразовательная школа"</div>`)[0];
+                popup_38e0b2ff6dce7a504be8d581c7aab68f.setContent(html_7b91e7daf64d031d13e792faf0aa1fc5);
+            
+        
+
+        circle_marker_15052f78c5d092d0e67e0591b020aec7.bindPopup(popup_38e0b2ff6dce7a504be8d581c7aab68f)
+        ;
+
+        
+    
+    
+            circle_marker_15052f78c5d092d0e67e0591b020aec7.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Забельская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_593525d55cec5a3255cfb4e34ff61944 = L.circleMarker(
+                [56.31956, 29.06157],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_37c6cb3925e9373ff0a9fa4af8fac907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d31021afdb6798c4ff0534c3d800c62f = $(`<div id="html_d31021afdb6798c4ff0534c3d800c62f" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Малаховская основная общеобразовательная школа"</div>`)[0];
+                popup_37c6cb3925e9373ff0a9fa4af8fac907.setContent(html_d31021afdb6798c4ff0534c3d800c62f);
+            
+        
+
+        circle_marker_593525d55cec5a3255cfb4e34ff61944.bindPopup(popup_37c6cb3925e9373ff0a9fa4af8fac907)
+        ;
+
+        
+    
+    
+            circle_marker_593525d55cec5a3255cfb4e34ff61944.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Малаховская основная общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bda54c0670afd7698859850c838204ab = L.circleMarker(
+                [56.53508, 29.79229],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_c7da9c0210b5c797661692a8f5f8a60e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f215ebc61e654fee18e35ec1569faf23 = $(`<div id="html_f215ebc61e654fee18e35ec1569faf23" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Островская основная общеобразовательная школа"</div>`)[0];
+                popup_c7da9c0210b5c797661692a8f5f8a60e.setContent(html_f215ebc61e654fee18e35ec1569faf23);
+            
+        
+
+        circle_marker_bda54c0670afd7698859850c838204ab.bindPopup(popup_c7da9c0210b5c797661692a8f5f8a60e)
+        ;
+
+        
+    
+    
+            circle_marker_bda54c0670afd7698859850c838204ab.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Островская основная общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cd12488472c3510a3ff90b76823ca0b = L.circleMarker(
+                [56.46267, 29.81331],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_827aebbebc81442042c352ca3169ac98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e4ddd1d10be032b0518c00fb0874568 = $(`<div id="html_7e4ddd1d10be032b0518c00fb0874568" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Говоровская основная общеобразовательная школа"</div>`)[0];
+                popup_827aebbebc81442042c352ca3169ac98.setContent(html_7e4ddd1d10be032b0518c00fb0874568);
+            
+        
+
+        circle_marker_1cd12488472c3510a3ff90b76823ca0b.bindPopup(popup_827aebbebc81442042c352ca3169ac98)
+        ;
+
+        
+    
+    
+            circle_marker_1cd12488472c3510a3ff90b76823ca0b.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Говоровская основная общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3dc4e2b8e081ba369285c837c4c07f8 = L.circleMarker(
+                [56.35371, 29.80436],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_e02c26fda81e3a68d73f8a1e9b5917bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_891bfb32aab5d02925e7a2e26798a647 = $(`<div id="html_891bfb32aab5d02925e7a2e26798a647" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Маевская средняя общеобразовательная школа"</div>`)[0];
+                popup_e02c26fda81e3a68d73f8a1e9b5917bd.setContent(html_891bfb32aab5d02925e7a2e26798a647);
+            
+        
+
+        circle_marker_e3dc4e2b8e081ba369285c837c4c07f8.bindPopup(popup_e02c26fda81e3a68d73f8a1e9b5917bd)
+        ;
+
+        
+    
+    
+            circle_marker_e3dc4e2b8e081ba369285c837c4c07f8.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Маевская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df8b7dd9e46c78a56e86ba0d36837c69 = L.circleMarker(
+                [56.58773, 29.29133],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_37ef7b03c0592e80b2ec9933ab8ab71b);
+        
+    
+        var popup_f500489854c4ccbbe31c3b5e40c516b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b78ddc5a90f84abbcebee543f69e3a87 = $(`<div id="html_b78ddc5a90f84abbcebee543f69e3a87" style="width: 100.0%; height: 100.0%;">Муниципальное образовательное учреждение "Красненская средняя общеобразовательная школа"</div>`)[0];
+                popup_f500489854c4ccbbe31c3b5e40c516b8.setContent(html_b78ddc5a90f84abbcebee543f69e3a87);
+            
+        
+
+        circle_marker_df8b7dd9e46c78a56e86ba0d36837c69.bindPopup(popup_f500489854c4ccbbe31c3b5e40c516b8)
+        ;
+
+        
+    
+    
+            circle_marker_df8b7dd9e46c78a56e86ba0d36837c69.bindTooltip(
+                `<div>
+                     Муниципальное образовательное учреждение "Красненская средняя общеобразовательная школа"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html></div>
+    </div>
+
+</body>
+</html>
